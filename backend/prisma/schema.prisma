@@ -26,6 +26,8 @@ model Blog {
   title    String
   content  String
   pubished Boolean @default(false)
+  
   authorId String
   author   User    @relation(fields: [authorId], references: [id])
+
 }
